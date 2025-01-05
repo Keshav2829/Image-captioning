@@ -1,0 +1,9 @@
+{ decoder: {
+      embed_size: 1024,
+      hidden_size: 2048,
+      lstm_input_size: 1536, # embed_size + img_embed_dim
+      n_layers: 2,
+      projection_dim: 512,
+      save_path: "data/weights/decoder/weights_7_layer.pth",
+      load_weights: true,
+    }, encoder: { weights_path: "data/weights/VGG_16/weights.pth", save_path: "data/weights/encoder/weights_7.pth", load_weights: true, img_embed_dim: 512 }, vocab_size: 5000, batch_size: 5, tokenizer: { train: true, base_tokenizer: "gpt2", path: "data/tokenizer", vocab_size: 5000 }, data: { rootdir: "data/dataset/flicker8k", train: "data/dataset/flicker8k/captions_train.csv", test: "data/dataset/flicker8k/captions_test.csv" }, lr: 0.00001, epochs: 10, device: "cuda", eval_steps: 5, save_weights: true }

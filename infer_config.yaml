@@ -1,0 +1,16 @@
+decoder:
+  embed_size: 1024
+  hidden_size: 2048
+  lstm_input_size: 1536
+  n_layers: 2
+  projection_dim: 512
+  save_path: data/weights/decoder/weights_7_layer.pth
+  load_weights: true
+encoder:
+  weights_path: data/weights/VGG_16/weights.pth
+  save_path: data/weights/encoder/weights_7.pth
+  load_weights: true
+  img_embed_dim: 512
+tokenizer:
+  path: data/tokenizer
+device: cpu
